@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4"
+  }
+}

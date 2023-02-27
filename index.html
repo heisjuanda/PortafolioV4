@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Kanit-->
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <!--scrollReveal-->
+    <!--<script src="https://unpkg.com/scrollreveal"></script>-->
+
+</head>
+
+<body>
+    <main data-scroll-container id="elevator-target">
+        <div class="loader">
+            <div>
+                <h1 id="loaderText">
+                    HELLO!
+                </h1>
+            </div>
+        </div>
+        <section class="sectionIntro">
+            <header class="headerIntro">
+                <img id="Imagen" src="assets/imagenes/myselfB_W1-min.webp"
+                    alt="foto de juan david moreno mirando al infinito">
+                <img id="Imagen2" src="assets/imagenes/myselfMobileDef.webp"
+                    alt="foto de juan david moreno mirando al infinito">
+                <div class="headerIntroTexto">
+                    <h1 id="Hello">
+                        <b> Hello!</b>
+                    </h1>
+                </div>
+
+                <h2 class="introductionInit1">
+                    <b>Discover More</b>
+                </h2>
+                <h2 class="introductionInit2">
+                    <b> About <span>This</span></b>
+                </h2>
+                <h2 class="interactable" data-type="link" style="margin-left: 1%;">
+                    <a id="specialLink"
+                        href="https://thepleasantpersonality.com/infp-personality/#:~:text=1%20INFP%20stands%20for%20Introverted%2C%20Intuitive%2C%20Feeling%2C%20and,...%205%20INFPs%20are%20generous%2C%20tolerant%2C%20and%20flexible."
+                        target="_blank">
+                        <b>INFP</b>
+                    </a>
+                </h2>
+                <h2 class="introductionInit3">
+                    <b> Individual</b>
+                </h2>
+                <nav class="menuHeaderInit">
+                    <div class="interactable" data-type="link">
+                        <a href="#ABOUT">
+                            <h3>
+                                ABOUT
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="interactable" data-type="link">
+                        <a href="#workTitle">
+                            <h3>
+                                WORK
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="interactable" data-type="link">
+                        <a href="#reachMe">
+                            <h3>
+                                CONTACT
+                            </h3>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <article class="aboutMeIntro">
+
+                <div class="scrollLottie">
+                    <lottie-player src="assets/animationsJSON/scrollDown.json" speed="1.2"
+                        style="width: 10vw; height: 10vw;" loop autoplay id="scrolldownLottie"></lottie-player>
+                </div>
+
+                <div class="aboutMeTitle" id="ABOUT">
+                    <h1 id="movement">
+                        ABOUT <br>
+                        <span>ME</span>
+                    </h1>
+                </div>
+
+                <div class="aboutMeDescription">
+
+                    <div>
+                        <img src="assets/imagenes/aboutSection/myselfAbout-min.webp"
+                            alt="Juan David Moreno Alfonso Posando">
+                    </div>
+
+                    <div>
+                    </div>
+                    <div>
+                        <p>
+                            <b>
+                                I'm a 20-year-old software developer student who loves to solve problems and is
+                                passionate
+                                about
+                                programming.
+                            </b>
+                            <span>DoB: February 5th, 2003</span>
+                        </p>
+                    </div>
+                    <div></div>
+                    <div>
+                    </div>
+                    <div>
+                        <p>
+                            <b>
+                                I've been always interested in technology, ever since I was a little kid, I'm an
+                                outgoing
+                                person
+                                who loves to have fun
+                            </b>
+                            <span>(I'm a little bit shy when you first meet me)</span>
+                            <b>
+                                But I take my work seriously.
+                            </b>
+                        </p>
+                    </div>
+                    <!--data-scroll data-scroll-speed="2" data-scroll-direction="vertical"-->
+                    <div>
+                        <p>
+                            <b>
+                                I want to create great apps that will make the world a better place, my enthusiasm for
+                                learning
+                                and my ideas are what drive me to be constantly working on new projects.
+                            </b>
+                        </p>
+                    </div>
+                    <div>
+                        <lottie-player src="assets/animationsJSON/3dShapes.json" speed="1"
+                            style="width: 100%; height: 100%;" loop autoplay id="3dShapesLottie"></lottie-player>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>
+                            <b>
+                                I also believe that I am eager to learn and interested in finding innovative solutions
+                                to
+                                complex problems, and at my age I am still at the beginning of my career and have many
+                                opportunities for growth and advancement.
+                            </b>
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+            <article class="someProjectsIntro">
+                <div class="title">
+                    <h1 id="workTitle">
+                        SOME <br> PROJECTS
+                    </h1>
+                </div>
+                <div class="table">
+                    <div>
+                        <div class="tituloProyecto1" class="interactable" data-type="link">
+                            <img src="assets/imagenes/projectSection/portafolio.webp" alt="titulo primer projecto">
+                        </div>
+                        <div class="colaboradoresYredes1" class="interactable" data-type="link">
+                            <a href="https://github.com/jdma253" target="_blank">
+                                <p>@jdma253</p>
+                            </a>
+                        </div>
+                        <a href="https://github.com/jdma253/Portafolio" target="_blank" class="interactable"
+                            data-type="link">
+                            <img src="assets/imagenes/projectSection/portafolioProject.webp"
+                                alt="first project image to show">
+                        </a>
+                        <div class="contadorProyecto1" class="interactable" data-type="link">
+                            <img src="assets/imagenes/projectSection/project_1.webp" alt="project number counter">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tituloProyecto2" class="interactable" data-type="link">
+                            <img src="assets/imagenes/projectSection/programLanguage.webp" alt="titulo primer projecto">
+                        </div>
+                        <div class="colaboradoresYredes2" class="interactable" data-type="link">
+                            <a href="https://github.com/jdma253" target="_blank">
+                                <p>@jdma253</p>
+                            </a>
+                            <a href="https://github.com/Paoladevelopment" target="_blank">
+                                <p>@Paoladevelopment</p>
+                            </a>
+                            <a href="https://github.com/Paoladevelopment" target="_blank">
+                                <p>@Paoladevelopment</p>
+                            </a>
+                            <a href="https://github.com/JuanFelipeJaramillo20" target="_blank">
+                                <p>@JuanFelipeJaramillo20</p>
+                            </a>
+                        </div>
+                        <a href="https://github.com/jdma253/Portafolio" target="_blank" class="interactable"
+                            data-type="link">
+                            <img src="assets/imagenes/projectSection/racketProject.webp"
+                                alt="first project image to show">
+                        </a>
+                        <div class="contadorProyecto2" class="interactable" data-type="link">
+                            <img src="assets/imagenes/projectSection/project_2.webp" alt="project number counter">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="contact">
+                <div class="titleSocial" id="reachMe">
+                    <h1 data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
+                        REACH ME HERE
+                    </h1>
+                </div>
+                <div class="socialMedia">
+                    <div class="instagram">
+                        <a href="https://www.instagram.com/heisjuanda/" target="_blank">
+                            <lottie-player class="interactable" data-type="link"
+                                src="assets/animationsJSON/instagramLogo.json" speed="1.1"
+                                style="width: 70%; height: 70%;" loop autoplay></lottie-player>
+                        </a>
+                    </div>
+                    <div class="linkedIn">
+                        <a href="https://www.linkedin.com/in/juan-david-moreno-883a46233/" target="_blank">
+                            <lottie-player class="interactable" data-type="link"
+                                src="assets/animationsJSON/linkedInLogo.json" speed="0.9"
+                                style="width: 70%; height: 70%;" loop autoplay></lottie-player>
+                        </a>
+                    </div>
+                    <div class="gitHub">
+                        <a href="https://github.com/jdma253" target="_blank">
+                            <lottie-player class="interactable" data-type="link"
+                                src="assets/animationsJSON/gitHubLogo.json" speed="1" style="width: 70%; height: 70%;"
+                                loop autoplay></lottie-player>
+                        </a>
+                    </div>
+                </div>
+                <div class="formulario">
+                    <div>
+                        <h3>
+                            Say Hello!
+                        </h3>
+                    </div>
+                    <form name="contact" method="post" data-netlify="true">
+                        <div class="nameL">
+                            <label for="nameI">
+                                <p>Name</p>
+                            </label>
+                        </div>
+                        <div class="nameI">
+                            <input autocomplete="off" required id="nameI" type="text"
+                                placeholder="First Name Last Name">
+                        </div>
+                        <div class="emailL">
+                            <label for="emailI">
+                                <p>Email</p>
+                            </label>
+                        </div>
+                        <div class="emailI">
+                            <input autocomplete="off" required id="emailI" type="email"
+                                placeholder="youremail@something.com">
+                        </div>
+                        <div class="messageL">
+                            <label for="messageI">
+                                <p>Message</p>
+                            </label>
+                        </div>
+                        <div class="messageI">
+                            <textarea autocomplete="off" id="messageI" required
+                                placeholder="I need a front-end developer for my business"></textarea>
+                        </div>
+                        <div class="sendF">
+                            <button type="submit">
+                                <p>
+                                    SEND
+                                </p>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+            <footer class="footer">
+                <div class="tablaFooter">
+                    <h1 class="created">
+                        CREATED BY
+                    </h1>
+                    <h1>
+
+                    </h1>
+                    <p class="juanda">
+                        ©JuanDa
+                    </p>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <div id="trailer">
+        <!--<img id="trailer-icon" width="6px" class="linkSymbol" height="6px" src="assets/imagenes/arrowLink.webp"
+            alt="icono">-->
+        <lottie-player class="linkSymbolt" id="trailer-icon" src="assets/animationsJSON/eyeLink.json" speed="1"
+            style="width: 10px; height: 10px;" loop autoplay></lottie-player>
+        <!--<lottie-player class="fotoSymbol" id="trailer-icon" src="assets/animationsJSON/linkMouse.json"
+            speed="1" style="width: 10px; height: 10px;" loop autoplay></lottie-player>-->
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+        LottieInteractivity.create({
+            mode: 'scroll',
+            player: '#scrolldownLottie',
+            actions: [
+                {
+                    visibility: [0, 1],
+                    type: 'seek',
+                    frames: [0, 100],
+                },
+            ],
+        }, {
+            mode: 'scroll',
+            player: '#3dShapesLottie',
+            actions: [
+                {
+                    visibility: [0, 1],
+                    type: 'seek',
+                    frames: [0, 100],
+                },
+            ],
+        },
+        );
+    </script>
+
+    <!--all the functions here-->
+    <!--LocomotiveScroll-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            scrollFromAnywhere: true,
+            smartphone: {
+                smooth: true,
+                locomotive: true,
+                init: true,
+                speed: 20,
+                multiplier: 2
+            },
+            tablet: {
+                smooth: true,
+                locomotive: true,
+                init: true,
+                speed: 20,
+                multiplier: 2,
+            },
+            smoothMobile: true,
+            speed: 1,
+            multiplier: 1.3,
+        });
+        scroll.stop()
+        let loader = document.querySelector('.loader')
+        setTimeout(() => {
+            document.querySelector('.loader').style.display='none'
+            scroll.start()
+        }, 5000)
+        document.addEventListener('DOMContentLoaded', () => {
+            function ScrollUpdateDelay() {
+                setTimeout(function () { scroll.update();}, 5100);
+            }
+            ScrollUpdateDelay();
+            // Detectar los enlaces internos y desplazar suavemente hacia la sección correspondiente
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    scroll.scrollTo(this.getAttribute('href'));
+                });
+            });
+            //word to list of letters and then inside a spam
+            const effect = (id, classN) => {
+                const e = document.getElementById(id),
+                    text = e.innerText.split('')
+                e.innerText = ''
+                text.forEach(letter => {
+                    const span = document.createElement('span')
+                    span.className = classN
+                    span.innerText = letter
+                    e.appendChild(span)
+                })
+            }
+            //trailer
+            let circle = document.getElementById('trailer');
+            //Introduction
+            let headerIntro = document.querySelector('.headerIntro')
+            let imagen = document.getElementById('Imagen')
+            let imagen1 = document.getElementById('Imagen2')
+            let about = document.getElementById('ABOUT')
+            let hello = document.getElementById('Hello')
+            let menuHeader = document.querySelector('.menuHeaderInit')
+            let opacityMenuHeader = window.getComputedStyle(menuHeader)
+            //about
+            let mover = document.querySelector('.aboutMeIntro')
+            //Work
+            let workSection = document.querySelector('.someProjectsIntro')
+            let workTitle = document.getElementById('workTitle')
+            effect('specialLink', 'letter')
+            //Contact
+            let contactSection = document.querySelector('.contact')
+            //effect('reachMe','reachMe')
+            //let reachMe = document.querySelector('.reachMe')
+            //Footer
+            let footerSection = document.querySelector('.footer')
+            //Loader
+            effect('loaderText', 'textLoader')
+            //Scroll event
+            scroll.on('scroll', function (instance) {
+                let value = instance.scroll.y
+                //let valueM = window.scrollY
+                if (window.innerWidth > 700) {
+                    if (mover.offsetTop > value) {
+                        console.log(value)
+                        imagen.style.transform = 'scale(' + (1 + (value * 0.00018)) + ')'
+                        if (opacityMenuHeader.getPropertyValue('opacity') > 0) {
+                            hello.style.opacity = 1 - value * 0.05
+                            menuHeader.style.top = value * 0.8 + 'px'
+                            menuHeader.style.opacity = 1 - value * 0.0078
+                        } else {
+                            hello.style.opacity = 1
+                            menuHeader.style.top = 0 + 'px'
+                            menuHeader.style.opacity = 0.8
+                        }
+                    } else {
+                        imagen.style.transform = 'scale(1)'
+                    }
+                    if (value > mover.offsetTop) {
+                        let valueN = value - mover.offsetTop
+                        //about.style.top = valueN * 0.6 + 'px'
+                        about.style.transform = 'translateY(' + (valueN * 0.6) + 'px) translateZ(0)'
+                        about.style.opacity = 1 - valueN / 1000
+                    } else {
+                        about.style.opacity = 1
+                        //about.style.top = 0 + 'px'
+                    }
+                    if (workSection.offsetTop < value && (contactSection.offsetTop - workTitle.offsetWidth) > value) {
+                        let valueN = value - workSection.offsetTop
+                        workTitle.style.position = 'relative'
+                        workTitle.style.transform = 'translateX(' + (-valueN * 0.9) + 'px) translateZ(0)'
+                        //workTitle.style.right = valueN*0.9 + 'px'
+                    }
+                } else {
+                    if (mover.offsetTop > value) {
+                        imagen1.style.transform = 'scale(' + (1 + (value * 0.00022)) + ')'
+                        if (opacityMenuHeader.getPropertyValue('opacity') > 0) {
+                            hello.style.opacity = 1 - value * 0.05
+                            menuHeader.style.top = value * 0.6 + 'px'
+                            menuHeader.style.opacity = 1 - value * 0.01
+                        } else {
+                            hello.style.opacity = 1
+                            menuHeader.style.top = 0 + 'px'
+                            menuHeader.style.opacity = 0.8
+                        }
+                    } else {
+                        imagen1.style.transform = 'scale(1)'
+                    }
+                    if (value > mover.offsetTop) {
+                        let valueN = value - mover.offsetTop
+                        //about.style.top = valueN * 0.6 + 'px'
+                        about.style.transform = 'translateY(' + (valueN * 0.6) + 'px) translateZ(0)'
+                        about.style.opacity = 1 - valueN / 650
+                    } else {
+                        about.style.opacity = 1
+                        //about.style.top = 0 + 'px'
+                    }
+                    if ((contactSection.offsetTop - workTitle.offsetWidth) > value && workSection.offsetTop < value) {
+                        let valueN = value - workSection.offsetTop
+                        workTitle.style.position = 'relative'
+                        workTitle.style.transform = 'translateX(' + (-valueN * 0.9) + 'px) translateZ(0)'
+                        //workTitle.style.opacity = 1 - valueN * 0.0009
+                    }
+                }
+            })
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                // Es un teléfono o tableta
+                const trailer = document.getElementById("trailer");
+                trailer.style.display = 'none'
+            } else {
+                //mouse trailer
+                const trailer = document.getElementById("trailer");
+                document.body.style.cursor = "none";
+                const animateTrailer = (e, interacting) => {
+                    const x = e.clientX - trailer.offsetWidth / 2,
+                        y = e.clientY - trailer.offsetHeight / 2;
+                    const keyframes = {
+                        transform: `translate(${x}px, ${y}px) scale(${interacting ? 4 : 1})`,
+                        filter: 'blur(' + (interacting ? 0.2 : 2) + 'px)',
+                    }
+                    trailer.animate(keyframes, {
+                        duration: 100,//800
+                        fill: "forwards"
+                    });
+                }
+                const getTrailerClass = type => {
+                    switch (type) {
+                        case "link":
+                            return "linkSymbolt";
+                        default:
+                            return "";
+                    }
+                }
+                window.onmousemove = e => {
+                    const interactable = e.target.closest(".interactable"),
+                        interacting = interactable !== null;
+                    const icon = document.getElementById("trailer-icon");
+                    animateTrailer(e, interacting);
+                    trailer.dataset.type = interacting ? interactable.dataset.type : "";
+                    if (interacting) {
+                        icon.className = getTrailerClass(interactable.dataset.type)
+                    }
+                    if (e.target.closest('.aboutMeIntro')) {
+                        circle.style.backgroundColor = 'black'
+                    } else if (e.target.closest('.someProjectsIntro')) {
+                        circle.style.backgroundColor = 'gray'
+                    } else {
+                        circle.style.backgroundColor = 'white'
+                    }
+                }
+            }
+        })
+        /*window.onload = function () {
+            function ScrollUpdateDelay() {
+                setTimeout(function () { scroll.update(); }, 1000);
+            }
+            ScrollUpdateDelay();
+            alert('hola')
+        }*/
+    </script>
+</body>
+
+</html>

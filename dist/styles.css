@@ -1,0 +1,17 @@
+html {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.section1 header {
+  border: 1px solid red;
+}
+.section1 header h1 {
+  color: white;
+  font-size: 4vw;
+}

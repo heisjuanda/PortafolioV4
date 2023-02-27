@@ -1,0 +1,811 @@
+@font-face {
+  font-family: "Apercu";
+  src: url("assets/fonts/ApercuFontFamily/ApercuProBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ApercuL";
+  src: url("assets/fonts/ApercuFontFamily/ApercuProLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body:hover > #trailer {
+  opacity: 1;
+}
+
+#trailer {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 20px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  display: grid;
+  place-items: center;
+}
+
+#trailer:not([data-type=""]) > #trailer-icon {
+  opacity: 1;
+}
+
+#trailer-icon {
+  font-size: 6px;
+  line-height: 4px;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+@media screen and (max-width: 700px) {
+  #trailer {
+    display: none;
+  }
+}
+.loader {
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.loader div {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  bottom: 25%;
+  right: 25%;
+}
+.loader div h1 {
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  font-size: clamp(35px, 10vw, 100px);
+}
+.loader div h1 .textLoader {
+  display: inline-block;
+  transform: translateY(6vw);
+  opacity: 0;
+}
+.loader div h1 .textLoader:nth-child(1) {
+  animation: animation 5s ease;
+  animation-delay: 0.6s;
+}
+.loader div h1 .textLoader:nth-child(2) {
+  animation: animation 5s ease;
+  animation-delay: 0.5s;
+}
+.loader div h1 .textLoader:nth-child(3) {
+  animation: animation 5s ease;
+  animation-delay: 0.4s;
+}
+.loader div h1 .textLoader:nth-child(4) {
+  animation: animation 5s ease;
+  animation-delay: 0.3s;
+}
+.loader div h1 .textLoader:nth-child(5) {
+  animation: animation 5s ease;
+  animation-delay: 0.2s;
+}
+.loader div h1 .textLoader:nth-child(6) {
+  animation: animation 5s ease;
+  animation-delay: 0.1s;
+}
+
+@keyframes animation {
+  0% {
+    transform: translateY(8vw);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-8vw);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .loader div h1 {
+    font-size: clamp(50px, 14vw, 120px);
+  }
+  .loader div h1 .textLoader:nth-child(1) {
+    animation: animation 5s ease;
+    animation-delay: 0.6s;
+  }
+  .loader div h1 .textLoader:nth-child(2) {
+    animation: animation 5s ease;
+    animation-delay: 0.5s;
+  }
+  .loader div h1 .textLoader:nth-child(3) {
+    animation: animation 5s ease;
+    animation-delay: 0.4s;
+  }
+  .loader div h1 .textLoader:nth-child(4) {
+    animation: animation 5s ease;
+    animation-delay: 0.3s;
+  }
+  .loader div h1 .textLoader:nth-child(5) {
+    animation: animation 5s ease;
+    animation-delay: 0.2s;
+  }
+  .loader div h1 .textLoader:nth-child(6) {
+    animation: animation 5s ease;
+    animation-delay: 0.1s;
+  }
+  @keyframes animation {
+    0% {
+      transform: translateY(20vw);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(0vw);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20vw);
+      opacity: 0;
+    }
+  }
+}
+html {
+  font-family: "Apercu", sans-serif;
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.c-scrollbar {
+  z-index: 40;
+}
+
+a,
+a:hover {
+  cursor: none;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%) translateZ(0);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%) translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) translateZ(0);
+  }
+}
+#Imagen {
+  display: inline;
+}
+
+#Imagen2 {
+  display: none;
+}
+
+.sectionIntro .headerIntro {
+  background-color: rgb(165, 164, 164);
+  height: 88.5vw;
+}
+.sectionIntro .headerIntro div {
+  height: 0vw;
+}
+.sectionIntro .headerIntro img {
+  position: relative;
+  z-index: 2;
+  width: 103vw;
+  margin-top: 5%;
+}
+.sectionIntro .headerIntro .headerIntroTexto {
+  width: 15%;
+  transform: translateY(-85.5vw) translateZ(0);
+}
+.sectionIntro .headerIntro .headerIntroTexto h1 {
+  font-size: 4vw;
+  color: white;
+  margin-left: 10%;
+  animation: 3s anim-lineUp ease-out;
+  animation-delay: 5s;
+}
+.sectionIntro .headerIntro .introductionInit1,
+.sectionIntro .headerIntro .introductionInit2,
+.sectionIntro .headerIntro .introductionInit3,
+.sectionIntro .headerIntro .interactable {
+  width: 25%;
+  position: relative;
+  z-index: 2;
+  font-size: 6vw;
+}
+.sectionIntro .headerIntro .introductionInit1 {
+  transform: translate(11vw, -42vw) translateZ(0);
+  width: 40%;
+}
+.sectionIntro .headerIntro .introductionInit2 {
+  transform: translate(10vw, -45vw) translateZ(0);
+  z-index: 1;
+  width: 20%;
+}
+.sectionIntro .headerIntro .introductionInit3 {
+  transform: translate(45vw, -72.7vw) translateZ(0);
+  width: 19%;
+}
+.sectionIntro .headerIntro .interactable {
+  transform: translate(28vw, -60.5vw) translateZ(0);
+  width: 15%;
+}
+.sectionIntro .headerIntro .interactable a {
+  color: wheat;
+  text-decoration: none;
+  transition: 1s;
+}
+.sectionIntro .headerIntro .interactable a .letter {
+  transition: transform 350ms ease;
+  display: inline-block;
+}
+.sectionIntro .headerIntro .interactable a:hover {
+  cursor: none;
+}
+.sectionIntro .headerIntro .interactable a:hover .letter {
+  transition-duration: 800ms;
+}
+.sectionIntro .headerIntro .interactable a:hover .letter:nth-child(1) {
+  transform: translate(-3vw, -2vw) rotate(-20deg);
+}
+.sectionIntro .headerIntro .interactable a:hover .letter:nth-child(2) {
+  transform: rotate(60deg);
+}
+.sectionIntro .headerIntro .interactable a:hover .letter:nth-child(3) {
+  transform: translate(2vw, -2vw) rotate(-90deg);
+}
+.sectionIntro .headerIntro .interactable a:hover .letter:nth-child(4) {
+  transform: translate(3vw, 2vw) rotate(-20deg);
+}
+.sectionIntro .headerIntro .menuHeaderInit {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  width: 88%;
+  position: relative;
+  z-index: 0;
+  transform: translate(-20vw, -87.5vw) translateZ(0);
+}
+.sectionIntro .headerIntro .menuHeaderInit div {
+  text-align: center;
+  margin-left: 4%;
+}
+.sectionIntro .headerIntro .menuHeaderInit div a {
+  animation: 5s anim-lineUp ease-out forwards;
+  animation-delay: 5s;
+  opacity: 0.8;
+  font-size: 1.5vw;
+  color: wheat;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.sectionIntro .headerIntro .menuHeaderInit div a:hover {
+  cursor: none;
+  opacity: 1;
+}
+.sectionIntro .scrollLottie {
+  margin-top: 5%;
+  width: 10%;
+  margin-inline: auto;
+}
+.sectionIntro .aboutMeIntro {
+  border: 1px solid transparent;
+  background-color: linen;
+  color: black;
+  position: relative;
+  z-index: 4;
+  height: 100%;
+}
+.sectionIntro .aboutMeIntro .aboutMeTitle {
+  position: relative;
+  margin-bottom: 50%;
+}
+.sectionIntro .aboutMeIntro .aboutMeTitle h1 {
+  margin-left: 10%;
+  font-size: clamp(70px, 10vw, 140px);
+}
+.sectionIntro .aboutMeIntro .aboutMeDescription {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  font-family: "ApercuL", sans-serif;
+}
+.sectionIntro .aboutMeIntro .aboutMeDescription div {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
+.sectionIntro .aboutMeIntro .aboutMeDescription div p {
+  font-size: clamp(20px, 2vw, 50px);
+}
+.sectionIntro .aboutMeIntro .aboutMeDescription div p span {
+  color: grey;
+}
+.sectionIntro .aboutMeIntro .aboutMeDescription div img {
+  border-radius: 2vw;
+  width: 30vw;
+}
+.sectionIntro .someProjectsIntro {
+  background-color: white;
+  position: relative;
+  z-index: 4;
+  border: 1px solid transparent;
+}
+.sectionIntro .someProjectsIntro .title {
+  margin-top: 22%;
+  transform: rotateZ(-90deg) translateY(-14vw);
+  width: 58%;
+}
+.sectionIntro .someProjectsIntro .title h1 {
+  color: black;
+  font-size: clamp(80px, 10vw, 150px);
+}
+.sectionIntro .someProjectsIntro .table {
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: auto;
+}
+.sectionIntro .someProjectsIntro .table div {
+  width: 32.8%;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-left: 50%;
+  margin-top: 20%;
+  overflow: hidden;
+}
+.sectionIntro .someProjectsIntro .table div .tituloProyecto1,
+.sectionIntro .someProjectsIntro .table div .tituloProyecto2 {
+  position: relative;
+  z-index: 7;
+  width: 28vw;
+  transform: translateY(22vw);
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid transparent;
+}
+.sectionIntro .someProjectsIntro .table div .tituloProyecto1 img,
+.sectionIntro .someProjectsIntro .table div .tituloProyecto2 img {
+  width: 28vw;
+}
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes1,
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 {
+  position: relative;
+  z-index: 7;
+  transform: translate(-10vw, 20vw) rotate(0deg);
+  overflow: visible;
+}
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes1 a,
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 a {
+  text-decoration: none;
+  color: black;
+}
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes1 a p,
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 a p {
+  font-size: 1vw;
+}
+.sectionIntro .someProjectsIntro .table div .contadorProyecto1,
+.sectionIntro .someProjectsIntro .table div .contadorProyecto2 {
+  transform: translate(-12vw, -30vw);
+}
+.sectionIntro .someProjectsIntro .table div .contadorProyecto1 img,
+.sectionIntro .someProjectsIntro .table div .contadorProyecto2 img {
+  width: 40vw;
+}
+.sectionIntro .someProjectsIntro .table div .tituloProyecto2 {
+  transform: translateY(26.7vw);
+}
+.sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 {
+  transform: translate(-12vw, 24vw) rotate(0deg);
+}
+.sectionIntro .someProjectsIntro .table div a {
+  cursor: none;
+}
+.sectionIntro .someProjectsIntro .table div a img {
+  transition: 0.5s;
+  width: 30vw;
+}
+.sectionIntro .someProjectsIntro .table div a:hover img {
+  transform: scale(1.15);
+}
+.sectionIntro .contact {
+  border: 1px solid transparent;
+  background-color: rgb(196, 188, 188);
+}
+.sectionIntro .contact .titleSocial {
+  font-size: clamp(75px, 10.5vw, 120px);
+  color: black;
+}
+.sectionIntro .contact .socialMedia {
+  display: flex;
+  flex-direction: row;
+}
+.sectionIntro .contact .socialMedia .instagram,
+.sectionIntro .contact .socialMedia .linkedIn,
+.sectionIntro .contact .socialMedia .gitHub {
+  margin-left: 6%;
+}
+.sectionIntro .contact .formulario .nameI {
+  grid-area: nameI;
+}
+.sectionIntro .contact .formulario .nameL {
+  grid-area: nameL;
+}
+.sectionIntro .contact .formulario .emailI {
+  grid-area: emailI;
+}
+.sectionIntro .contact .formulario .emailL {
+  grid-area: emailL;
+}
+.sectionIntro .contact .formulario .messageI {
+  grid-area: messageI;
+}
+.sectionIntro .contact .formulario .messageL {
+  grid-area: messageL;
+}
+.sectionIntro .contact .formulario .sendF {
+  grid-area: sendB;
+  margin-top: 5%;
+}
+.sectionIntro .contact .formulario h3 {
+  text-align: center;
+  font-size: 6vw;
+  font-size: clamp(50px, 60px + 1vw, 90px);
+}
+.sectionIntro .contact .formulario form {
+  display: grid;
+  grid-template-areas: "nameL nameL emailL emailL" "nameI nameI emailI emailI" "messageL messageL messageL messageL" "messageI messageI messageI messageI" "sendB sendB sendB sendB";
+  margin-bottom: 10%;
+  gap: 5%;
+}
+.sectionIntro .contact .formulario form div {
+  margin-inline: auto;
+}
+.sectionIntro .contact .formulario form div label {
+  font-size: clamp(10px, 20px + 1vw, 50px);
+  color: black;
+  cursor: none;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+.sectionIntro .contact .formulario form div label:hover {
+  opacity: 1;
+}
+.sectionIntro .contact .formulario form div input,
+.sectionIntro .contact .formulario form div textarea {
+  border: none;
+  border-bottom: 0.2vw solid black;
+  background-color: transparent;
+  font-size: clamp(5px, 8px + 1.1vw, 30px);
+  width: 30vw;
+  flex-grow: 1;
+  outline: none;
+  cursor: none;
+  opacity: 0.7;
+  transition: 0.3s;
+  font-family: "ApercuL", sans-serif;
+}
+.sectionIntro .contact .formulario form div input:hover,
+.sectionIntro .contact .formulario form div textarea:hover {
+  opacity: 1;
+}
+.sectionIntro .contact .formulario form div textarea {
+  width: 45vw;
+}
+.sectionIntro .contact .formulario form div input:-webkit-autofill,
+.sectionIntro .contact .formulario form div input:-webkit-autofill:hover,
+.sectionIntro .contact .formulario form div input:-webkit-autofill:focus,
+.sectionIntro .contact .formulario form div input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000000 !important;
+}
+.sectionIntro .contact .formulario form div button {
+  border: none;
+  background-color: transparent;
+  opacity: 0.7;
+  cursor: none;
+  transition: 0.5s;
+}
+.sectionIntro .contact .formulario form div button p {
+  font-family: "Apercu", sans-serif;
+  font-size: clamp(10px, 20px + 1.1vw, 50px);
+}
+.sectionIntro .contact .formulario form div button:hover {
+  opacity: 1;
+}
+
+footer {
+  border: 1px solid transparent;
+  background-color: black;
+}
+footer h1 {
+  font-family: "Apercu", sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-inline: hidden;
+    scroll-behavior: smooth;
+  }
+  #Imagen {
+    display: none;
+  }
+  #Imagen2 {
+    display: inline;
+  }
+  .sectionIntro .headerIntro {
+    height: 191vw;
+  }
+  .sectionIntro .headerIntro img {
+    margin-top: 10%;
+    width: 95vw;
+  }
+  .sectionIntro .headerIntro .headerIntroTexto {
+    width: 15%;
+    transform: translateY(-195vw) translateZ(0);
+  }
+  .sectionIntro .headerIntro .headerIntroTexto h1 {
+    font-size: 8vw;
+  }
+  .sectionIntro .headerIntro .introductionInit1,
+  .sectionIntro .headerIntro .introductionInit2,
+  .sectionIntro .headerIntro .introductionInit3,
+  .sectionIntro .headerIntro .interactable {
+    width: 90%;
+    font-size: 10.5vw;
+  }
+  .sectionIntro .headerIntro .introductionInit1 {
+    transform: translate(6vw, -100vw) translateZ(0);
+  }
+  .sectionIntro .headerIntro .introductionInit2 {
+    transform: translate(6vw, -107vw) translateZ(0);
+    width: 70%;
+    z-index: 2;
+  }
+  .sectionIntro .headerIntro .introductionInit3 {
+    transform: translate(48vw, -137.5vw) translateZ(0);
+    width: 30%;
+  }
+  .sectionIntro .headerIntro .interactable {
+    transform: translate(21vw, -115.5vw) translateZ(0);
+    width: 25%;
+  }
+  .sectionIntro .headerIntro .menuHeaderInit {
+    gap: 0%;
+    width: 88%;
+    z-index: 0;
+  }
+  .sectionIntro .headerIntro .menuHeaderInit div {
+    margin-left: 5%;
+  }
+  .sectionIntro .headerIntro .menuHeaderInit div a {
+    font-size: 3vw;
+  }
+  .sectionIntro .headerIntro .menuHeaderInit div a h3 {
+    transform: translate(15vw, -88.5vw) translateZ(0);
+  }
+  .sectionIntro .scrollLottie {
+    margin-top: 15%;
+    width: 10%;
+    margin-inline: auto;
+  }
+  .sectionIntro .scrollLottie lottie-player {
+    transform: scale(2);
+  }
+  .sectionIntro .aboutMeIntro {
+    height: 100%;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeTitle {
+    margin-bottom: 100%;
+    margin-top: 20%;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeTitle h1 {
+    margin-left: 10%;
+    font-size: 15vw;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeDescription {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeDescription div {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeDescription div p {
+    font-size: 4vw;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeDescription div p span {
+    color: grey;
+  }
+  .sectionIntro .aboutMeIntro .aboutMeDescription div img {
+    border-radius: 2vw;
+    width: 50vw;
+  }
+  .sectionIntro .someProjectsIntro .title {
+    margin-top: 25%;
+    transform: rotateZ(-90deg) translateY(-12vw);
+    width: 58%;
+  }
+  .sectionIntro .someProjectsIntro .title h1 {
+    font-size: 15vw;
+  }
+  .sectionIntro .someProjectsIntro .table {
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: auto;
+  }
+  .sectionIntro .someProjectsIntro .table div {
+    width: 58%;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-left: 45%;
+    margin-top: 20%;
+    overflow: hidden;
+  }
+  .sectionIntro .someProjectsIntro .table div .tituloProyecto1,
+  .sectionIntro .someProjectsIntro .table div .tituloProyecto2 {
+    position: relative;
+    z-index: 7;
+    width: 51vw;
+    transform: translateY(39.5vw);
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid transparent;
+  }
+  .sectionIntro .someProjectsIntro .table div .tituloProyecto1 img,
+  .sectionIntro .someProjectsIntro .table div .tituloProyecto2 img {
+    width: 51vw;
+  }
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes1,
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 {
+    position: relative;
+    z-index: 7;
+    transform: translate(-15vw, 40vw) rotate(0deg);
+  }
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes1 a,
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 a {
+    text-decoration: none;
+    color: black;
+  }
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes1 a p,
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 a p {
+    font-size: 2.2vw;
+  }
+  .sectionIntro .someProjectsIntro .table div .contadorProyecto1,
+  .sectionIntro .someProjectsIntro .table div .contadorProyecto2 {
+    transform: translate(-20vw, -40vw);
+  }
+  .sectionIntro .someProjectsIntro .table div .contadorProyecto1 img,
+  .sectionIntro .someProjectsIntro .table div .contadorProyecto2 img {
+    width: 50vw;
+  }
+  .sectionIntro .someProjectsIntro .table div .tituloProyecto2 {
+    transform: translateY(55vw);
+  }
+  .sectionIntro .someProjectsIntro .table div .colaboradoresYredes2 {
+    transform: translate(-21vw, 53vw) rotate(0deg);
+  }
+  .sectionIntro .someProjectsIntro .table div a {
+    cursor: none;
+  }
+  .sectionIntro .someProjectsIntro .table div a img {
+    transition: 0.5s;
+    width: 55vw;
+  }
+  .sectionIntro .someProjectsIntro .table div a:hover img {
+    transform: scale(1.15);
+  }
+  .sectionIntro .contact .titleSocial {
+    font-size: 12vw;
+  }
+  .sectionIntro .contact .socialMedia {
+    display: flex;
+    flex-direction: row;
+  }
+  .sectionIntro .contact .socialMedia .instagram,
+  .sectionIntro .contact .socialMedia .linkedIn,
+  .sectionIntro .contact .socialMedia .gitHub {
+    margin-left: 6%;
+  }
+  .sectionIntro .contact .formulario .nameI {
+    grid-area: nameI;
+  }
+  .sectionIntro .contact .formulario .nameL {
+    grid-area: nameL;
+  }
+  .sectionIntro .contact .formulario .emailI {
+    grid-area: emailI;
+  }
+  .sectionIntro .contact .formulario .emailL {
+    grid-area: emailL;
+  }
+  .sectionIntro .contact .formulario .messageI {
+    grid-area: messageI;
+  }
+  .sectionIntro .contact .formulario .messageL {
+    grid-area: messageL;
+  }
+  .sectionIntro .contact .formulario .sendF {
+    grid-area: sendB;
+    margin-top: 10%;
+  }
+  .sectionIntro .contact .formulario h3 {
+    text-align: center;
+    font-size: 12vw;
+  }
+  .sectionIntro .contact .formulario form {
+    grid-template-areas: "nameL nameL" "nameI nameI" "emailL emailL" "emailI emailI" "messageL messageL" "messageI messageI" "sendB sendB ";
+    margin-bottom: 25%;
+  }
+  .sectionIntro .contact .formulario form div {
+    margin-inline: auto;
+  }
+  .sectionIntro .contact .formulario form div label {
+    font-size: 6vw;
+  }
+  .sectionIntro .contact .formulario form div input,
+  .sectionIntro .contact .formulario form div textarea {
+    font-size: 4vw;
+    width: 50vw;
+    font-family: "ApercuL", sans-serif;
+  }
+  .sectionIntro .contact .formulario form div textarea {
+    width: 70vw;
+  }
+  .sectionIntro .contact .formulario form div button {
+    border: transparent;
+    background-color: transparent;
+    opacity: 0.7;
+    cursor: none;
+    transform: translateY(-8.4vw);
+  }
+  .sectionIntro .contact .formulario form div button p {
+    font-family: "Apercu", sans-serif;
+    font-size: 6vw;
+  }
+  footer {
+    border: 1px solid transparent;
+    background-color: black;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,824 @@
+//sass --watch styles.scss:styles.css
+@use 'fonts';
+@use 'trailerMouse';
+@use 'loader';
+html {
+    font-family: 'Apercu', sans-serif;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.c-scrollbar {
+    z-index: 40;
+}
+
+a,
+a:hover {
+    cursor: none;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%) translateZ(0);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%) translateZ(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%) translateZ(0);
+    }
+}
+
+#Imagen {
+    display: inline;
+}
+
+#Imagen2 {
+    display: none;
+}
+
+@mixin centrarMargin() {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//first section
+.sectionIntro {
+    .headerIntro {
+        background-color: rgb(165, 164, 164);
+
+        div {
+            height: 0vw;
+        }
+
+        img {
+            position: relative;
+            z-index: 2;
+            width: 103vw;
+            margin-top: 5%;
+        }
+
+        .headerIntroTexto {
+            width: 15%;
+            transform: translateY(-85.5vw) translateZ(0);
+
+            h1 {
+                font-size: 4vw;
+                color: white;
+                margin-left: 10%;
+                animation: 3s anim-lineUp ease-out;
+                animation-delay: 5s;
+            }
+        }
+
+        .introductionInit1,
+        .introductionInit2,
+        .introductionInit3,
+        .interactable {
+            width: 25%;
+            position: relative;
+            z-index: 2;
+            font-size: 6vw;
+        }
+
+        .introductionInit1 {
+            transform: translate(11vw, -42vw) translateZ(0);
+            width: 40%;
+        }
+
+        .introductionInit2 {
+            transform: translate(10vw, -45vw) translateZ(0);
+            z-index: 1;
+            width: 20%;
+        }
+
+        .introductionInit3 {
+            transform: translate(45vw, -72.7vw) translateZ(0);
+            width: 19%;
+        }
+
+        .interactable {
+            transform: translate(28vw, -60.5vw) translateZ(0);
+            width: 15%;
+
+            a {
+                color: wheat;
+                text-decoration: none;
+                transition: 1s;
+
+                .letter {
+                    transition: transform 350ms ease;
+                    display: inline-block;
+                }
+            }
+
+            a:hover {
+                cursor: none;
+
+                .letter {
+                    transition-duration: 800ms;
+                }
+
+                .letter:nth-child(1) {
+                    transform: translate(-3vw, -2vw) rotate(-20deg);
+                }
+
+                .letter:nth-child(2) {
+                    transform: rotate(60deg);
+                }
+
+                .letter:nth-child(3) {
+                    transform: translate(2vw, -2vw) rotate(-90deg);
+                }
+
+                .letter:nth-child(4) {
+                    transform: translate(3vw, 2vw) rotate(-20deg);
+                }
+            }
+        }
+
+        .menuHeaderInit {
+            display: flex;
+            flex-direction: row;
+            gap: 20%;
+            width: 88%;
+            position: relative;
+            z-index: 0;
+            transform: translate(-20vw, -87.5vw) translateZ(0);
+
+            div {
+                text-align: center;
+                margin-left: 4%;
+
+                a {
+                    animation: 5s anim-lineUp ease-out forwards;
+                    animation-delay: 5s;
+                    opacity: 0.8;
+                    font-size: 1.5vw;
+                    color: wheat;
+                    text-decoration: none;
+                    transition: 0.5s;
+                }
+
+                a:hover {
+                    cursor: none;
+                    opacity: 1;
+                }
+            }
+        }
+
+        height: 88.5vw;
+    }
+
+    .scrollLottie {
+        margin-top: 5%;
+        width: 10%;
+        margin-inline: auto;
+    }
+
+    .aboutMeIntro {
+        border: 1px solid transparent;
+        background-color: linen;
+        color: black;
+        position: relative;
+        z-index: 4;
+
+        .aboutMeTitle {
+            position: relative;
+            margin-bottom: 50%;
+
+            h1 {
+                margin-left: 10%;
+                //font-size: 140px;
+                font-size: clamp(70px, 10vw, 140px);
+            }
+        }
+
+        .aboutMeDescription {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            font-family: 'ApercuL', sans-serif;
+
+            div {
+                position: relative;
+                z-index: 5;
+                @include centrarMargin();
+                width: 80%;
+
+                p {
+                    //font-size: 50px;
+                    font-size: clamp(20px, 2vw, 50px);
+
+                    span {
+                        color: grey;
+                    }
+                }
+
+                img {
+                    border-radius: 2vw;
+                    width: 30vw;
+                }
+            }
+        }
+
+        height: 100%;
+    }
+
+    .someProjectsIntro {
+        background-color: white;
+        position: relative;
+        z-index: 4;
+        border: 1px solid transparent;
+
+        .title {
+            margin-top: 22%;
+            transform: rotateZ(-90deg) translateY(-14vw);
+            width: 58%;
+
+            h1 {
+                color: black;
+                //font-size: 10vw;
+                font-size: clamp(80px, 10vw, 150px);
+            }
+        }
+
+        .table {
+            display: grid;
+            grid-template-columns: 90%;
+            grid-template-rows: auto;
+
+            div {
+                width: 32.8%;
+                @include centrarMargin();
+                margin-left: 50%;
+                margin-top: 20%;
+                overflow: hidden;
+
+                .tituloProyecto1,
+                .tituloProyecto2 {
+                    position: relative;
+                    z-index: 7;
+                    width: 28vw;
+                    transform: translateY(22vw);
+                    @include centrarMargin();
+                    border: 1px solid transparent;
+
+                    img {
+                        width: 28vw;
+                    }
+                }
+
+                .colaboradoresYredes1,
+                .colaboradoresYredes2 {
+                    position: relative;
+                    z-index: 7;
+                    transform: translate(-10vw, 20vw) rotate(0deg);
+                    overflow: visible;
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        p {
+                            font-size: 1vw;
+                        }
+                    }
+                }
+
+                .contadorProyecto1,
+                .contadorProyecto2 {
+                    transform: translate(-12vw, -30vw);
+
+                    img {
+                        width: 40vw;
+                    }
+                }
+
+                .tituloProyecto2 {
+                    transform: translateY(26.7vw);
+                }
+
+                .colaboradoresYredes2 {
+                    transform: translate(-12vw, 24vw) rotate(0deg);
+                }
+
+                a {
+                    cursor: none;
+
+                    img {
+                        transition: 0.5s;
+                        width: 30vw;
+                    }
+                }
+
+                a:hover {
+                    img {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        border: 1px solid transparent;
+        background-color: rgb(196, 188, 188);
+
+        .titleSocial {
+            font-size: clamp(75px, 10.5vw, 120px);
+            color: black;
+        }
+
+        .socialMedia {
+            display: flex;
+            flex-direction: row;
+
+            .instagram,
+            .linkedIn,
+            .gitHub {
+                margin-left: 6%;
+            }
+        }
+
+        .formulario {
+            .nameI {
+                grid-area: nameI;
+            }
+
+            .nameL {
+                grid-area: nameL;
+            }
+
+            .emailI {
+                grid-area: emailI;
+            }
+
+            .emailL {
+                grid-area: emailL;
+            }
+
+            .messageI {
+                grid-area: messageI;
+            }
+
+            .messageL {
+                grid-area: messageL;
+            }
+
+            .sendF {
+                grid-area: sendB;
+                margin-top: 5%;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 6vw;
+                font-size: clamp(50px, 60px + 1vw, 90px);
+            }
+
+            form {
+                display: grid;
+                grid-template-areas:
+                    'nameL nameL emailL emailL'
+                    'nameI nameI emailI emailI'
+                    'messageL messageL messageL messageL'
+                    'messageI messageI messageI messageI'
+                    'sendB sendB sendB sendB'
+                ;
+                margin-bottom: 10%;
+                gap: 5%;
+
+                div {
+                    margin-inline: auto;
+
+                    label {
+                        //font-size: 3vw;
+                        font-size: clamp(10px, 20px + 1vw, 50px);
+                        color: black;
+                        cursor: none;
+                        transition: 0.3s;
+                        opacity: 0.7;
+                    }
+
+                    label:hover {
+                        opacity: 1;
+                    }
+
+                    input,
+                    textarea {
+                        border: none;
+                        border-bottom: 0.2vw solid black;
+                        background-color: transparent;
+                        //font-size: 1.5vw;
+                        font-size: clamp(5px, 8px + 1.1vw, 30px);
+                        width: 30vw;
+                        flex-grow: 1;
+                        outline: none;
+                        cursor: none;
+                        opacity: 0.7;
+                        transition: 0.3s;
+                        font-family: 'ApercuL', sans-serif;
+                    }
+
+                    input:hover,
+                    textarea:hover {
+                        opacity: 1;
+                    }
+
+                    textarea {
+                        width: 45vw;
+                    }
+
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:hover,
+                    input:-webkit-autofill:focus,
+                    input:-webkit-autofill:active {
+                        transition: background-color 5000s ease-in-out 0s;
+                        -webkit-text-fill-color: #000000 !important;
+                    }
+
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        opacity: 0.7;
+                        cursor: none;
+                        transition: 0.5s;
+
+                        p {
+                            font-family: 'Apercu', sans-serif;
+                            //font-size: 2.5vw;
+                            font-size: clamp(10px, 20px + 1.1vw, 50px);
+                        }
+                    }
+
+                    button:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    border: 1px solid transparent;
+    background-color: black;
+
+    h1 {
+        font-family: 'Apercu', sans-serif;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-inline: hidden;
+        scroll-behavior: smooth;
+    }
+
+    #Imagen {
+        display: none;
+    }
+
+    #Imagen2 {
+        display: inline;
+    }
+
+    //first section
+    .sectionIntro {
+        .headerIntro {
+            img {
+                margin-top: 10%;
+                width: 95vw;
+                //transform: translateX(-15vw);
+            }
+
+            .headerIntroTexto {
+                width: 15%;
+                transform: translateY(-195vw) translateZ(0);
+
+                h1 {
+                    font-size: 8vw;
+                    //border: 1px solid red;
+                }
+            }
+
+            .introductionInit1,
+            .introductionInit2,
+            .introductionInit3,
+            .interactable {
+                width: 90%;
+                font-size: 10.5vw;
+            }
+
+            .introductionInit1 {
+                transform: translate(6vw, -100vw) translateZ(0);
+            }
+
+            .introductionInit2 {
+                transform: translate(6vw, -107vw) translateZ(0);
+                width: 70%;
+                z-index: 2;
+            }
+
+            .introductionInit3 {
+                transform: translate(48vw, -137.5vw) translateZ(0);
+                width: 30%;
+            }
+
+            .interactable {
+                transform: translate(21vw, -115.5vw) translateZ(0);
+                width: 25%;
+            }
+
+            .menuHeaderInit {
+                gap: 0%;
+                width: 88%;
+                z-index: 0;
+
+                div {
+                    margin-left: 5%;
+
+                    a {
+                        font-size: 3vw;
+
+                        h3 {
+                            transform: translate(15vw, -88.5vw) translateZ(0);
+                        }
+                    }
+                }
+            }
+
+            height: 191vw;
+        }
+
+        .scrollLottie {
+            margin-top: 15%;
+            width: 10%;
+            margin-inline: auto;
+
+            lottie-player {
+                transform: scale(2);
+            }
+        }
+
+        .aboutMeIntro {
+            .aboutMeTitle {
+                margin-bottom: 100%;
+                margin-top: 20%;
+
+                h1 {
+                    margin-left: 10%;
+                    font-size: 15vw;
+                }
+            }
+
+            .aboutMeDescription {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                //font-family: 'Roboto', sans-serif;
+
+                div {
+                    @include centrarMargin();
+                    width: 70%;
+
+                    p {
+                        font-size: 4vw;
+
+                        span {
+                            color: grey;
+                        }
+                    }
+
+                    img {
+                        border-radius: 2vw;
+                        width: 50vw;
+                    }
+                }
+            }
+
+            height: 100%;
+        }
+
+        .someProjectsIntro {
+            .title {
+                margin-top: 25%;
+                transform: rotateZ(-90deg) translateY(-12vw);
+                width: 58%;
+
+                h1 {
+                    font-size: 15vw;
+                }
+            }
+
+            .table {
+                display: grid;
+                grid-template-columns: 90%;
+                grid-template-rows: auto;
+
+                div {
+                    width: 58%;
+                    @include centrarMargin();
+                    margin-left: 45%;
+                    margin-top: 20%;
+                    overflow: hidden;
+
+                    .tituloProyecto1,
+                    .tituloProyecto2 {
+                        position: relative;
+                        z-index: 7;
+                        width: 51vw;
+                        transform: translateY(39.5vw);
+                        @include centrarMargin();
+                        border: 1px solid transparent;
+
+                        img {
+                            width: 51vw;
+                        }
+                    }
+
+                    .colaboradoresYredes1,
+                    .colaboradoresYredes2 {
+                        position: relative;
+                        z-index: 7;
+                        transform: translate(-15vw, 40vw) rotate(0deg);
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+
+                            p {
+                                font-size: 2.2vw;
+                            }
+                        }
+                    }
+
+                    .contadorProyecto1,
+                    .contadorProyecto2 {
+                        transform: translate(-20vw, -40vw);
+
+                        img {
+                            width: 50vw;
+                        }
+                    }
+
+                    .tituloProyecto2 {
+                        transform: translateY(55vw);
+                    }
+
+                    .colaboradoresYredes2 {
+                        transform: translate(-21vw, 53vw) rotate(0deg);
+                    }
+
+                    a {
+                        cursor: none;
+
+                        img {
+                            transition: 0.5s;
+                            width: 55vw;
+                        }
+                    }
+
+                    a:hover {
+                        img {
+                            transform: scale(1.15);
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            .titleSocial {
+                font-size: 12vw;
+            }
+
+            .socialMedia {
+                display: flex;
+                flex-direction: row;
+
+                .instagram,
+                .linkedIn,
+                .gitHub {
+                    margin-left: 6%;
+                }
+            }
+
+            .formulario {
+                .nameI {
+                    grid-area: nameI;
+                }
+
+                .nameL {
+                    grid-area: nameL;
+                }
+
+                .emailI {
+                    grid-area: emailI;
+                }
+
+                .emailL {
+                    grid-area: emailL;
+                }
+
+                .messageI {
+                    grid-area: messageI;
+                }
+
+                .messageL {
+                    grid-area: messageL;
+                }
+
+                .sendF {
+                    grid-area: sendB;
+                    margin-top: 10%;
+                }
+
+                h3 {
+                    text-align: center;
+                    font-size: 12vw;
+                }
+
+                form {
+                    grid-template-areas:
+                        'nameL nameL'
+                        'nameI nameI'
+                        'emailL emailL'
+                        'emailI emailI'
+                        'messageL messageL'
+                        'messageI messageI'
+                        'sendB sendB '
+                    ;
+                    margin-bottom: 25%;
+
+                    div {
+                        margin-inline: auto;
+
+                        label {
+                            font-size: 6vw;
+                        }
+
+                        input,
+                        textarea {
+                            font-size: 4vw;
+                            width: 50vw;
+                            font-family: 'ApercuL', sans-serif;
+                        }
+
+                        textarea {
+                            width: 70vw;
+                        }
+
+                        button {
+                            border: transparent;
+                            background-color: transparent;
+                            opacity: 0.7;
+                            cursor: none;
+                            transform: translateY(-8.4vw);
+
+                            p {
+                                font-family: 'Apercu', sans-serif;
+                                font-size: 6vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        border: 1px solid transparent;
+        background-color: black;
+    }
+}

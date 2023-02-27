@@ -1,0 +1,106 @@
+.loader{
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    div{
+        position: absolute;
+        top:25%;
+        left: 25%;
+        bottom: 25%;
+        right: 25%;
+        h1{
+            text-align: center;
+            color: black;
+            overflow: hidden;
+            font-size: clamp(35px,10vw,100px);
+            .textLoader{
+                display: inline-block;
+                transform: translateY(6vw);
+                opacity: 0;
+            }
+            .textLoader:nth-child(1){
+                animation: animation 5s ease;
+                animation-delay: 0.6s;
+            }
+            .textLoader:nth-child(2){
+                animation: animation 5s ease;
+                animation-delay: 0.5s;
+            }
+            .textLoader:nth-child(3){
+                animation: animation 5s ease;
+                animation-delay: 0.4s;
+            }
+            .textLoader:nth-child(4){
+                animation: animation 5s ease;
+                animation-delay: 0.3s;
+            }
+            .textLoader:nth-child(5){
+                animation: animation 5s ease;
+                animation-delay: 0.2s;
+            }
+            .textLoader:nth-child(6){
+                animation: animation 5s ease;
+                animation-delay: 0.1s;
+            }
+        }
+    }
+}
+@keyframes animation{
+    0%{
+        transform: translateY(8vw);
+        opacity: 0;
+    }50%{
+        transform: translateY(0vw);
+        opacity: 1;
+    }100%{
+        transform: translateY(-8vw);
+        opacity: 0;
+    }
+}
+@media screen and (max-width:700px) {
+    .loader{
+        div{
+            h1{
+                font-size: clamp(50px,14vw,120px);
+                .textLoader:nth-child(1){
+                    animation: animation 5s ease;
+                    animation-delay: 0.6s;
+                }
+                .textLoader:nth-child(2){
+                    animation: animation 5s ease;
+                    animation-delay: 0.5s;
+                }
+                .textLoader:nth-child(3){
+                    animation: animation 5s ease;
+                    animation-delay: 0.4s;
+                }
+                .textLoader:nth-child(4){
+                    animation: animation 5s ease;
+                    animation-delay: 0.3s;
+                }
+                .textLoader:nth-child(5){
+                    animation: animation 5s ease;
+                    animation-delay: 0.2s;
+                }
+                .textLoader:nth-child(6){
+                    animation: animation 5s ease;
+                    animation-delay: 0.1s;
+                }
+            }
+            @keyframes animation{
+                0%{
+                    transform: translateY(20vw);
+                    opacity: 0;
+                }50%{
+                    transform: translateY(0vw);
+                    opacity: 1;
+                }100%{
+                    transform: translateY(-20vw);
+                    opacity: 0;
+                }
+            }
+        }
+
+    }
+}
